@@ -1,0 +1,35 @@
+#include <stdio.h> 
+#include <conio.h> 
+int main() 
+{
+    while(1)
+{   
+ int num1,num2; 
+float result; 
+char ch;  
+printf("Enter first number: "); 
+scanf("%d",&num1); 
+printf("Enter second number: "); 
+scanf("%+d",&num2); 
+ printf("Choose operation to perform (+,-,*,/,%): "); 
+ ch=getche(); 
+switch(ch) 
+{ 
+    case '+': result=num1+num2; 
+    break; 
+    case '-': result=num1-num2; 
+    break; 
+    case '*': result=num1*num2; 
+    break; 
+    case '/': result=(float)num1/(float)num2; 
+    break; 
+    case '%': result=num1%num2; 
+    break; 
+    default: printf("Invalid operation.\n"); getch(); return 0; 
+} 
+ 
+printf(" \n Result: %d %c %d = %f\n",num1,ch,num2,result);
+ getch(); 
+}
+ return 0; 
+}
